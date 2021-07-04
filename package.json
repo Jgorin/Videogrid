@@ -1,0 +1,22 @@
+{
+  "type": "module",
+  "private": true,
+  "workspaces": [
+    "server",
+    "client",
+    "e2e"
+  ],
+  "scripts": {
+    "build:client": "yarn workspace video_grid-client build",
+    "dev": "yarn workspace video_grid-server dev",
+    "dev:debug": "yarn workspace video_grid-server dev:debug",
+    "heroku-postbuild": "yarn workspace video_grid-client build",
+    "start": "yarn workspace video_grid-server start",
+    "dev:cypress": "yarn workspace video_grid-server dev:e2e",
+    "e2e:open": "yarn workspace video_grid-e2e e2e:open",
+    "e2e:run": "yarn workspace video_grid-e2e e2e:run"
+  },
+  "engines": {
+    "node": "^14.15"
+  }
+}
